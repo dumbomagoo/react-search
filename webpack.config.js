@@ -17,7 +17,7 @@ module.exports = {
     //   filename: 'bundled.js'
     // },
     rules: [{
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       use: {
         loader: "babel-loader"
@@ -38,6 +38,9 @@ module.exports = {
         }
       }]
     }]
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
   },
   plugins: [ htmlPlugin ]
 };
