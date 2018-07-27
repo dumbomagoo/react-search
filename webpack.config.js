@@ -29,7 +29,7 @@ module.exports = {
         loader: "style-loader"
       },{
         loader: "css-loader",
-        options:{
+        options: {
           modules: true,
           importLoaders: 1,
           localIdentName: "[name]_[local]_[hash:base64]",
@@ -37,6 +37,24 @@ module.exports = {
           minimize: true
         }
       }]
+    },{
+       test: /\.scss$/,
+       use: [{
+         loader: 'style-loader'
+       },{
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1,
+          localIdentName: "[name]_[local]_[hash:base64]",
+          sourceMap: true,
+          minimize: true
+        }
+       },{
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true
+        }
+       }]
     }]
   },
   resolve: {

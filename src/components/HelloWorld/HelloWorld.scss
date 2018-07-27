@@ -1,0 +1,10 @@
+@import "../../variables.scss";
+
+.hello-world {
+  background-color: lightblue;
+
+  @media screen and (min-width: $small) {
+    background-color: darkblue;
+    color: beige;
+  }
+}
