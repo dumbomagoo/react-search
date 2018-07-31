@@ -1,10 +1,10 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const htmlPlugin = new HtmlWebPackPlugin({
   // File to use during generation
-  template: "./src/index.html", 
+  template: './src/index.html',
   // file name of newly generated file in dist
-  filename: "./index.html"
+  filename: './index.html',
 });
 
 module.exports = {
@@ -20,45 +20,45 @@ module.exports = {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       use: {
-        loader: "babel-loader"
-      }
+        loader: 'babel-loader',
+      },
     },
     {
       test: /\.css$/,
       use: [{
-        loader: "style-loader"
-      },{
-        loader: "css-loader",
+        loader: 'style-loader',
+      }, {
+        loader: 'css-loader',
         options: {
           modules: true,
           importLoaders: 1,
-          localIdentName: "[name]_[local]_[hash:base64]",
+          localIdentName: '[name]_[local]_[hash:base64]',
           sourceMap: true,
-          minimize: true
-        }
-      }]
-    },{
-       test: /\.scss$/,
-       use: [{
-         loader: 'style-loader'
-       },{
+          minimize: true,
+        },
+      }],
+    }, {
+      test: /\.scss$/,
+      use: [{
+        loader: 'style-loader',
+      }, {
         loader: 'css-loader',
         options: {
           importLoaders: 1,
-          localIdentName: "[name]_[local]_[hash:base64]",
+          localIdentName: '[name]_[local]_[hash:base64]',
           sourceMap: true,
-          minimize: true
-        }
-       },{
+          minimize: true,
+        },
+      }, {
         loader: 'sass-loader',
         options: {
-          sourceMap: true
-        }
-       }]
-    }]
+          sourceMap: true,
+        },
+      }],
+    }],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
   },
-  plugins: [ htmlPlugin ]
+  plugins: [htmlPlugin],
 };
