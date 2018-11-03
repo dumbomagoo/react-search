@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "test": "mocha --reporter spec testSetup.js \"src/components/**/*.spec.js\"",
+    "test": "mocha --reporter spec testSetup.js \"src/**/*.spec.js\"",
     "eslint": "./node_modules/.bin/eslint --ext .jsx --ext .js ."
   },
   "devDependencies": {
