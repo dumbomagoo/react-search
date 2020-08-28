@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "mocha --reporter spec testSetup.js \"src/**/*.spec.js\"",
-    "eslint": "./node_modules/.bin/eslint --ext .jsx --ext .js ."
+    "lint": "./node_modules/.bin/eslint --ext .jsx --ext .js ."
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -26,9 +26,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
     "html-webpack-plugin": "^3.2.0",
-    "jsdom": "^11.11.0",
+    "jsdom": "^11.12.0",
     "mocha": "^5.2.0",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.14.1",
     "sass-loader": "^7.0.3",
     "sinon": "^6.1.4",
     "style-loader": "^0.21.0",

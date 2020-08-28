@@ -32,7 +32,9 @@ require.extensions['.scss'] = () => null;
 // to simulate a browser environment for tests.
 const jsdom = require('jsdom');
 
-const { document } = (new jsdom.JSDOM('')).window;
+const { document } = (new jsdom.JSDOM('',{
+  url: "http://localhost"
+})).window;
 
 // Set globals to mimic a browser
 const exposedProperties = ['window', 'navigator', 'document'];
